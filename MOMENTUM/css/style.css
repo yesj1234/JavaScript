@@ -1,0 +1,214 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: white;
+  --color-yellow: #ffff00;
+  --color-blue: #1976d2;
+  --color-red: #e53935;
+  --background-color: rgba(255, 255, 255, 0.3);
+  /* size */
+  --small-font-size: 12px;
+  --big-font-size: 30px;
+  --font-size: 18px;
+  --button-size: 60px;
+  --border-size: 4px;
+  --base-space: 8px;
+}
+
+body,
+html {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: decimal;
+}
+.hidden {
+  display: none;
+}
+
+.crossfade figure {
+  animation: imageAnimation 60s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  margin: 0;
+}
+
+.crossfade > figure:nth-child(1) {
+  background-image: url(../img/0.jpeg);
+}
+
+.crossfade > figure:nth-child(2) {
+  animation-delay: 12s;
+  background-image: url(../img/1.jpeg);
+}
+.crossfade > figure:nth-child(3) {
+  animation-delay: 24s;
+  background-image: url(../img/2.jpeg);
+}
+.crossfade > figure:nth-child(4) {
+  animation-delay: 36s;
+  background-image: url(../img/0.jpeg);
+}
+.crossfade > figure:nth-child(5) {
+  animation-delay: 48s;
+  background-image: url(../img/1.jpeg);
+}
+
+@keyframes imageAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  8% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section#placed-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  height: 50vh;
+  width: 70vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+}
+
+#clock {
+  font-size: 4.5em;
+  margin: 0;
+  align-self: center;
+  border-radius: 16px;
+  background-color: var(--background-color);
+}
+
+#login-form {
+  display: flex;
+  justify-content: center;
+}
+#login-form input {
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: black;
+}
+
+#greeting {
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: var(--background-color);
+  font-size: calc(2.5 * var(--font-size));
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  border-radius: 16px;
+}
+#quote span:first-child {
+  font-size: var(--font-size);
+  font-style: italic;
+  font-weight: 700;
+  opacity: 1;
+}
+
+#quote span:nth-child(2) {
+  font-size: var(--font-size);
+}
+
+#placed-top-left {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 20vh;
+  width: 10vw;
+}
+
+#weather {
+  position: relative;
+}
+
+section#placed-right {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  padding: 2vw;
+}
+
+#todo-form {
+  margin-top: calc(18 * var(--base-space));
+  border: none;
+}
+#todo-form input {
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#todo-form input:focus {
+  border: 3px solid blue;
+}
+
+#todo,
+#done {
+  font-size: var(--big-font-size);
+}
+
+#todo-list,
+#done-todo-list {
+  font-size: var(--font-size);
+}
+
+button {
+  padding: 1px;
+  margin-left: 3px;
+  border-radius: var(--base-space);
+}
+mark {
+  padding: 0 0.5em;
+  border-radius: var(--base-space);
+}
+
+#todo-list mark {
+  background-color: #e53935;
+}
+
+#done-todo-list mark {
+  background-color: aqua;
+}
