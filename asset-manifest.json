@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-publish/static/css/main.2f46469b.css",
-    "main.js": "/react-publish/static/js/main.fadda316.js",
-    "index.html": "/react-publish/index.html",
-    "main.2f46469b.css.map": "/react-publish/static/css/main.2f46469b.css.map",
-    "main.fadda316.js.map": "/react-publish/static/js/main.fadda316.js.map"
+    "main.css": "/JavaScript/static/css/main.2f46469b.css",
+    "main.js": "/JavaScript/static/js/main.fadda316.js",
+    "index.html": "/JavaScript/index.html",
+    "main.2f46469b.css.map": "/JavaScript/static/css/main.2f46469b.css.map",
+    "main.fadda316.js.map": "/JavaScript/static/js/main.fadda316.js.map"
   },
   "entrypoints": [
     "static/css/main.2f46469b.css",
